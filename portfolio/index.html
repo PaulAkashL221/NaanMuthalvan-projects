@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Resume - Barnaba Abishek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        body.light-theme {
+            background: linear-gradient(135deg, #f4f4f4, #ffffff);
+            color: #000000;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Section Titles */
+        .section h2 {
+            text-align: center; /* Center align the title */
+            font-size: 2.5rem; /* Adjust font size */
+            color: #ff8c42; /* Orange color */
+            margin-bottom: 1rem; /* Add some spacing */
+        }
+
+        /* Navigation Bar */
+        .top-nav {
+            width: 100%;
+            background-color: #ff8c42;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .top-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        .top-nav ul li a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .theme-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .theme-btn:hover {
+            color: #ff8c42;
+        }
+
+        .menu-button {
+            display: none;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            background-color: #ff8c42;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .top-nav ul {
+                flex-direction: column;
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 1rem 0;
+            }
+
+            .top-nav ul li {
+                text-align: center;
+            }
+
+            .top-nav ul li a {
+                display: block;
+                padding: 1rem;
+                margin: 0.5rem 0;
+            }
+
+            .top-nav.open ul {
+                display: flex;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 6rem 2rem 2rem;
+        }
+
+        .section {
+            padding: 3rem 1rem;
+            border-bottom: 1px solid #444;
+        }
+
+        /* Home Section */
+        #abi {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            border: 5px solid #ff8c42;
+        }
+
+        #abi1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: #ff8c42;
+        }
+
+        #abi2 {
+            font-size: 200%;
+            margin: 1rem 0;
+            color: #ffffff;
+        }
+
+        body.light-theme #abi2 {
+            color: #000000;
+        }
+
+        /* Resume Section */
+        .resume-content {
+            background: #ffffff;
+            color: #000000;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Resume Section Styling */
+.resume-content {
+    background: #ffffff;
+    color: #000000;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-content h3 {
+    color: #ff8c42;
+    margin-bottom: 1rem;
+}
+
+.resume-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.resume-content strong {
+    color: #ff8c42;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff8c42;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
+}
+
+        /* Skills Section */
+        .skills-section {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .skills-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .skills-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        body.light-theme .skills-section p {
+            color: #000000;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .skills-category {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(50% - 3rem);
+            max-width: 400px;
+        }
+
+        .skills-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .skills-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        .skill-item:hover {
+            background-color: rgba(255, 140, 66, 0.2);
+        }
+
+        .skill-item i {
+            font-size: 1.2rem;
+            color: #ff8c42;
+        }
+
+        .skill-item img {
+            height: 24px;
+            width: 24px;
+            border-radius: 5px;
+        }
+
+        body.light-theme .skill-item {
+            color: #ff8c42; /* Orange text in light theme */
+        }
+
+        body.light-theme .skill-item i {
+            color: #ff8c42; /* Orange icon in light theme */
+        }
+
+        /* Projects Section */
+        .portfolio {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .portfolio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .portfolio p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        body.light-theme .portfolio p {
+            color: #000000;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1 1 calc(33% - 3rem);
+            max-width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        body.light-theme .project-card {
+            background-color: rgba(255, 140, 66, 0.1);
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ff8c42;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        body.light-theme .project-card p {
+            color: #000000;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+        }
+
+        /* Project Details Section */
+        .project-details {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-details-content {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .project-details-content img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .project-details-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ff8c42;
+        }
+
+        .project-details-content p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .project-buttons button {
+            padding: 0.8rem 1.5rem;
+            background-color: #ff8c42;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .project-buttons button:hover {
+            background-color: #e67332;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #fff;
+        }
+
+        /* Responsive Design for Project Details */
+        @media (max-width: 768px) {
+            .project-details-content {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            .project-details-content img {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .project-buttons button {
+                width: 100%;
+            }
+        }
+
+        /* Contact Section */
+        #contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        #contact-form button {
+            padding: 0.8rem 1.5rem;
+            background-color: #ff8c42;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact-form button:hover {
+            background-color: #e67332;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            color: #ff8c42;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e67332;
+        }
+
+        /* Utility Classes */
+        .curve {
+            height: 30px;
+            background: #ff8c42;
+            border-radius: 0 0 50% 50%;
+            margin: -1px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #ff8c42;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
+        }
+
+        /* Typing Animation for Roles */
+        #role {
+            display: inline-block;
+            min-width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #ff8c42;
+            animation: blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #ff8c42;
+            }
+        }
+         /* Footer Styling */
+         footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff8c42;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="top-nav" id="top-nav">
+            <ul>
+                <li><a href="#home" class="nav-btn">Home</a></li>
+                <li><a href="#about" class="nav-btn">About</a></li>
+                <li><a href="#skills" class="nav-btn">Skills</a></li>
+                <li><a href="#projects" class="nav-btn">Projects</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn">🌙</button>
+                </li>
+            </ul>
+            <div class="menu-button" onclick="toggleMenu()">☰</div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section home">
+                <img src="img1.png" id="abi" alt="Barnaba Abishek">
+                <h1 id="abi1">Hi, I'm <br> Paul Akash L</h1>
+                <h2 id="abi2">I am a: <span id="role"></span></h2>
+                <h3>A skilled React developer with a strong portfolio, passionate about staying updated on frontend tech. Collaborative and committed to quality, you thrive in dynamic teams. Eager to contribute creativity and bring innovative ideas to life.</h3>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section about">
+                <h2>About</h2>
+                <p>Creative & Passionate</p>
+                <p>About Paul Akash L
+
+                  I'm Paul Akash L, a passionate game developer and web developer. I love bringing creative ideas to life through code, whether it's designing engaging gaming experiences or building dynamic websites. Constantly exploring new technologies, I enjoy problem-solving and pushing my skills to the next level. My goal is to create innovative and user-friendly digital experiences that leave an impact</p>
+                <div class="skills">
+                    <div class="skill">
+                        <span>Development</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Marketing</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="curve"></div>
+
+           <!-- Resume Section -->
+<section id="resume" class="section resume">
+  <h2>Resume</h2>
+  <div class="resume-content">
+      <!-- Experience -->
+      <div class="experience">
+          <h3>Experience</h3>
+          <p>
+              <strong>Software Developer</strong><br>
+              ABC Tech Solutions – New York, NY | Jan 2020 – Present<br>
+              - Designed and implemented scalable web applications, improving system performance by 30%.<br>
+              - Collaborated with cross-functional teams to develop new features, enhancing user engagement by 20%.<br>
+              - Led code reviews and mentored junior developers, ensuring best coding practices.
+          </p>
+      </div>
+
+      <!-- Education -->
+      <div class="education">
+          <h3>Education</h3>
+          <p>
+              <strong>Bachelor of Science in Computer Science</strong><br>
+              University of Madras<br>
+              - Graduated with 72%
+          </p>
+      </div>
+
+      <!-- Projects -->
+      <div class="projects">
+          <h3>Projects</h3>
+          <p>
+              <strong>Calculator App</strong><br>
+              - Technologies Used: HTML, CSS, JavaScript<br>
+              - Created a functional calculator app using front-end technologies.
+          </p>
+          <p>
+              <strong>Task Management App</strong><br>
+              - Technologies Used: Flutter, Firebase<br>
+              - Developed a cross-platform mobile app for task tracking and team collaboration.<br>
+              - Implemented push notifications and real-time data synchronization.<br>
+              - Achieved over 5,000 downloads with a 4.5-star rating on the app store.
+          </p>
+      </div>
+
+      <!-- Publications -->
+      <div class="publications">
+          <h3>Publications</h3>
+          <p>
+              <strong>"Optimizing Machine Learning Models for Insurance Risk Assessment"</strong><br>
+              - Published in Journal of Data Science, 2023.
+          </p>
+      </div>
+  </div>
+  <div class="buttons">
+      <a href="https://drive.google.com/file/d/13iIZbddRjU0iHZJPiz44Dsf1_jgbILTm/view?usp=drive_link" download class="btn">Download Resume</a>
+  </div>
+</section>
+<div class="curve"></div>
+
+              <!-- Skills Section -->
+              <section id="skills" class="section skills">
+                <h1>Skills</h1>
+                <h3>Here are some of my skills on which I have learnt.</h3>
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3>Languages</h3>
+                        <div class="skills-items">
+                            <div class="skill-item"><i class="fab fa-html5"></i><img src="html.png" alt="HTML"> HTML</div>
+                            <div class="skill-item"><i class="fab fa-css3-alt"></i><img src="css.png" alt="CSS"> CSS</div>
+                            <div class="skill-item"><i class="fab fa-js"></i><img src="js.png" alt="JavaScript"> JavaScript</div>
+                            <div class="skill-item"><i class="fab fa-bootstrap"></i><img src="react.png" alt="React"> React Js</div>
+                            <div class="skill-item"><i class="fab fa-react"></i><img src="py.png" alt="Python"> Python</div>
+                            <div class="skill-item"><i class="fab fa-redux"></i><img src="ja.png" alt="Java"> Java</div>
+                        </div>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Others</h3>
+                        <div class="skills-items">
+                            <div class="skill-item"><i class="fab fa-git-alt"></i><img src="git.png" alt="Git"> Git</div>
+                            <div class="skill-item"><i class="fab fa-github"></i><img src="gitup.png" alt="GitHub"> GitHub</div>
+                            <div class="skill-item"><i class="fas fa-cloud"></i><img src="can.png" alt="Canva"> Canva</div>
+                            <div class="skill-item"><i class="fas fa-code"></i><img src="vs.png" alt="VS Code"> VS Code</div>
+                            <div class="skill-item"><i class="fas fa-tools"></i><img src="cap.png" alt="Cap Cut"> Cap Cut</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="curve"></div>
+            
+
+            <!-- Projects Section -->
+            <section id="projects" class="section portfolio">
+                <h2>Projects</h2>
+                <p>My work and projects.</p>
+                <div class="project-container">
+                    <div class="project-card" onclick="showProjectDetails('project1')">
+                        <img src="p1.jpg" alt="Project Image 1">
+                        <h3>Currency Calculator</h3>
+                    </div>
+                    <div class="project-card" onclick="showProjectDetails('project2')">
+                        <img src="p2.jpg" alt="Project Image 2">
+                        <h3>Shoes-Shope</h3>
+                    </div>
+                   
+                </div>
+
+                <!-- Project Details Section -->
+                <div id="project-details" class="project-details">
+                    <div class="project-details-content">
+                        <span class="close" onclick="closeProjectDetails()">&times;</span>
+                        <img id="project-details-img" src="" alt="Project Image">
+                        <h3 id="project-details-title"></h3>
+                        <p id="project-details-description"></p>
+                        <button id="project-details-code">View Code</button>
+                        <button id="project-details-website">Visit Website</button>
+                    </div>
+                </div>
+            </section>
+            <div class="curve"></div>
+
+            <!-- Contact Section -->
+            <!-- Contact Section -->
+<section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Get in touch with me.</p>
+    <form id="contact-form" action="https://formsubmit.co/barnabaabishek2005@gmail.com" method="POST">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+  <div class="footer-content">
+      <p>© 2025 Reserved. All rights reserved.</p>
+      <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+</footer>
+        </main>
+    </div>
+
+    <script>
+        // Toggle Navigation Menu
+        function toggleMenu() {
+            const nav = document.getElementById('top-nav');
+            nav.classList.toggle('open');
+        }
+
+        // Smooth Scroll to Sections
+        function showSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show Project Details
+        function showProjectDetails(projectId) {
+            const projectDetails = document.getElementById('project-details');
+            const projectImg = document.getElementById('project-details-img');
+            const projectTitle = document.getElementById('project-details-title');
+            const projectDescription = document.getElementById('project-details-description');
+            const projectCode = document.getElementById('project-details-code');
+            const projectWebsite = document.getElementById('project-details-website');
+
+            // Example data for projects
+            const projects = {
+                project1: {
+                    img: 'p1.jpg',
+                    title: 'Currency Calculator',
+                    description: 'The **Currency Calculator** is a web-based tool for quick currency conversions, built with HTML, CSS, and JavaScript. It provides an easy-to-use interface and accurate exchange rate calculations. 🚀',
+                    codeLink: 'https://github.com/PaulAkashL221/Currency-Calculator',
+                    websiteLink: 'https://67d6951ae9854d321c8f61ec--resplendent-wisp-0ee379.netlify.app/'
+                },
+                project2: {
+                    img: 'p2.jpg',
+                    title: 'Shoes-Shope',
+                    description: 'The Shoes Shop is a web-based e-commerce platform for showcasing and selling shoes. Built with HTML, CSS, JavaScript, and PHP, it offers a user-friendly interface for browsing and purchasing footwear online. 🚀',
+                    codeLink: 'https://github.com/PaulAkashL221/Shoes-Shope',
+                    websiteLink: 'https://67d6956b07d391408b51c844--cute-meerkat-d73510.netlify.app/'
+                },
+                project3: {
+                    img: 'p3.jpg',
+                    title: 'Project Title 3',
+                    description: 'This is a short description of the project 3.',
+                    codeLink: 'https://github.com/your-repo3',
+                    websiteLink: 'https://yourwebsite3.com'
+                }
+            };
+
+            const project = projects[projectId];
+            projectImg.src = project.img;
+            projectTitle.textContent = project.title;
+            projectDescription.textContent = project.description;
+            projectCode.onclick = () => window.open(project.codeLink, '_blank');
+            projectWebsite.onclick = () => window.open(project.websiteLink, '_blank');
+
+            projectDetails.style.display = 'flex';
+            setTimeout(() => {
+                projectDetails.classList.add('show');
+            }, 10);
+        }
+
+        // Close Project Details
+        function closeProjectDetails() {
+            const projectDetails = document.getElementById('project-details');
+            projectDetails.classList.remove('show');
+            setTimeout(() => {
+                projectDetails.style.display = 'none';
+            }, 300);
+        }
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            themeToggle.textContent = document.body.classList.contains('light-theme') ? '🌙' : '☀️';
+        });
+        // Typing Animation for Roles
+const roles = ["Full Stack Developer", "Web Developer", "UI/UX Designer"];
+let currentRole = 0;
+let currentIndex = 0;
+let deleting = false;
+
+const typeSpeed = 100; // Speed of typing (in milliseconds)
+const deleteSpeed = 50; // Speed of deleting (in milliseconds)
+const delayBetweenRoles = 2000; // Delay before switching roles (in milliseconds)
+
+function type() {
+    const roleElement = document.getElementById("role");
+    const currentText = roles[currentRole];
+
+    if (deleting) {
+        // Delete one character
+        roleElement.textContent = currentText.substring(0, currentIndex--);
+    } else {
+        // Type one character
+        roleElement.textContent = currentText.substring(0, currentIndex++);
+    }
+
+    // Check if the current text is fully typed
+    if (!deleting && currentIndex === currentText.length) {
+        deleting = true; // Start deleting
+        setTimeout(type, delayBetweenRoles); // Wait before deleting
+    } else if (deleting && currentIndex === 0) {
+        deleting = false; // Stop deleting
+        currentRole = (currentRole + 1) % roles.length; // Move to the next role
+        setTimeout(type, 500); // Wait before typing the next role
+    } else {
+        // Continue typing or deleting
+        setTimeout(type, deleting ? deleteSpeed : typeSpeed);
+    }
+}
+
+// Start Typing Animation
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(type, 500); // Start after a short delay
+});
+        // Typing Animation for Roles
+
+
+
+
+        // Typing Animation for Roles
+       
+        
+    </script>
+</body>
+</html>
